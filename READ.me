@@ -1,0 +1,34 @@
+## REAM.ME
+
+Automação HubSpot - Movimentação de Negócio 
+
+// Objetivo principal 
+/ Mover negocios entre pipelines
+
+// Ferramentas / Tecnologias 
+/ HubSpot SDK Oficial + API hubspot 
+/ JavaScript (Node.js)
+
+//Fluxo de execução ( main function )
+/ Disparado por workflow HubSpot
+/ Assincrono ( chamadas externas )
+
+// Configuração Inicial 
+/ Instância Cliente hubspot + accessToken
+/ Obtenção deadID (event.object.objectid)
+/ Definição novaPipelineID
+/ Definição novoEstagioID
+
+// Processo de atualização ( try block )
+/ Criaçao updatePayload: properties: pipeline e dealStage
+/ Chamada API: crm.deals.basciAPI.updatePayload
+/ Parametros:dealID, updatePayload
+
+// Retorno em caso de sucesso 
+/ outputFields
+
+// Tratamento de Erros (catch block )
+/ caputura exceções 
+/ console.error (mensagem de erro)
+/ retorno para workflow (falha): outputFields 
+
